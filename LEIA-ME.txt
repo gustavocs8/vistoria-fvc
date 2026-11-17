@@ -1,0 +1,58 @@
+VISTORIA FVC – APP INSTALÁVEL NO CELULAR
+========================================
+
+O que é
+-------
+App para preencher a Ficha de Verificação de Conformidade (FVC) de redutores e controladores eletrônicos de velocidade.
+Funciona sem internet depois de instalado e usa a câmera do celular. As fotos levam data, hora e coordenadas quando o aparelho as grava.
+Gera o PDF da FVC com as seções 1 a 7 do modelo do DNIT, mais um anexo com o quadro de não conformidades. O parecer conclusivo é sugerido a partir das marcações e pode ser editado.
+
+Como instalar
+-------------
+1. Publique a pasta "vistoria-fvc-app" em um endereço https, como Netlify ou GitHub Pages. Use um site separado do app Vistoria FD.
+2. No celular, abra o link:
+   - Android (Chrome): menu ⋮ > "Instalar app".
+   - iPhone (Safari): Compartilhar > "Adicionar à Tela de Início".
+3. Para atualizar depois, envie a pasta nova ao MESMO site (no Netlify: Deploys > arrastar a pasta). Não crie um site novo, ou as fichas salvas no aparelho ficam no endereço antigo.
+
+Primeiro uso
+------------
+- Aba Resumo > Logo do cabeçalho: envie a logo que deve aparecer no topo da FVC.
+- Aba Resumo > Seção 1: confira os textos de objetivo, responsável, equipamentos e tramitação.
+- Na primeira ficha, preencha contratada, lote, contrato, nome e função. O app guarda esses dados para as próximas.
+
+Durante a verificação (passo a passo)
+-------------------------------------
+A ficha é preenchida em 6 etapas, uma por tela: Equipamento, Rodovia, Placas, Manutenção, Fotos e Validação.
+- Use Próximo e Voltar no rodapé, ou toque direto em uma etapa no topo. A barra azul mostra o andamento.
+- Etapa concluída fica com ✓ verde. O texto abaixo de cada etapa diz o que falta.
+- Na etapa Fotos, cada item da lista tem o botão Fotografar: a foto já entra na categoria certa. Ajuste o sentido em cada foto.
+  O quadro amarelo fica verde quando houver 6 fotos e todos os itens obrigatórios.
+- Na Validação, toque em "Sugerir parecer", revise o texto e salve.
+
+Relatórios
+----------
+- Em cada ficha, "Gerar FVC" oferece: FVC resumida, FVC completa (modelo DNIT) e Relatório fotográfico
+  (quadro de identificação, 6 fotos por página com legenda "Foto: NN – BR – Km – Lado", ocorrências e equipe).
+- Resumo > Relatório mensal consolidado: escolha o mês e o nº da medição e preencha contrato, fiscal, processo e equipe.
+  O PDF traz capa, sumário, apresentação, dados do contrato, croqui com os equipamentos, tabela de faixas,
+  inconformidades, FVC e relatório fotográfico de cada equipamento, análise técnica e termo de conclusão.
+- Os índices IDF, IEF e ICV vêm do SIOR e não estão no app: o relatório traz o quadro em branco para preencher.
+- Campos não informados saem como "[a preencher]".
+
+Verificações já realizadas (planilha)
+------------------------------------
+- Resumo > Levantamentos em planilha > Baixar planilha-modelo.
+- Preencha as abas Fichas, Placas e Fotos (mesmo código e data em todas). Cole as fotos sobre a célula da coluna Foto ou digite o nome do arquivo.
+- Resumo > Importar planilha + fotos: selecione o .xlsx e, se for o caso, as fotos.
+- Ao final, gere as FVCs resumidas de todas as verificações em um único PDF.
+
+Levar as fichas para a base da equipe
+-------------------------------------
+- No celular: Resumo > Transferir fichas > Exportar pacote (.json com fichas e fotos).
+- Na versão online da equipe: Resumo > Transferir fichas > Importar pacote.
+
+Cuidados
+--------
+- As fichas ficam só no aparelho até serem exportadas. Exporte ao fim de cada dia de campo.
+- As providências do anexo são recomendações técnicas e não substituem a decisão da fiscalização do DNIT.
