@@ -194,6 +194,96 @@ textarea{min-height:84px;resize:vertical}
 .tbl th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .tbl a{color:var(--accent)}
 .phsel{border:0;border-top:1px solid var(--line);border-radius:0;min-height:36px;font-size:13px;background:var(--surface);width:100%}
+/* ===== Tema moderno ===== */
+:root{
+  --bg:#F3F5F9; --surface:#FFFFFF; --surface-2:#EEF1F6; --ink:#141A24; --muted:#5E6878; --line:#E1E6EE;
+  --accent:#2457C5; --accent-ink:#FFFFFF; --accent-soft:#E3EBFB;
+  --hdr1:#0F2A5C; --hdr2:#2457C5; --asphalt:#0F2A5C; --asphalt-ink:#F3F6FC; --marking:#FFC53D;
+  --shadow:0 1px 2px rgba(16,28,52,.06),0 4px 16px rgba(16,28,52,.06);
+  --f-display:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:16px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1018; --surface:#151B26; --surface-2:#1C2431; --ink:#E7ECF4; --muted:#98A3B5; --line:#273142;
+  --accent:#7DA6F5; --accent-ink:#0A1428; --accent-soft:#1B2A47; --hdr1:#0A1630; --hdr2:#1A3C80; --asphalt:#0A1630;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.25);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1018; --surface:#151B26; --surface-2:#1C2431; --ink:#E7ECF4; --muted:#98A3B5; --line:#273142;
+  --accent:#7DA6F5; --accent-ink:#0A1428; --accent-soft:#1B2A47; --hdr1:#0A1630; --hdr2:#1A3C80; --asphalt:#0A1630;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.25);color-scheme:dark}
+body{font:400 15.5px/1.5 var(--f-body);-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+body::before{background:var(--hdr1)}
+:focus-visible{outline:3px solid var(--accent-soft);outline-offset:2px}
+header.bar{background:linear-gradient(135deg,var(--hdr1),var(--hdr2));border-radius:0 0 22px 22px;box-shadow:0 6px 24px rgba(15,42,92,.25)}
+.bar-in{padding-block:14px 4px}
+.brand b{font:800 21px/1.1 var(--f-display);text-transform:none;letter-spacing:-.02em}
+.brand small{opacity:.8}
+.logo-chip{border-radius:10px;height:40px}
+.sync{font:600 11.5px/1 var(--f-body);background:rgba(255,255,255,.12);padding:7px 10px;border-radius:999px}
+nav.tabs{background:rgba(255,255,255,.12);border-radius:14px;padding:4px;gap:4px;margin-block:10px 14px}
+nav.tabs a{font:600 14px/1 var(--f-body);text-transform:none;letter-spacing:0;padding:11px 6px;border:0;border-radius:10px;opacity:.85;transition:background .2s,color .2s}
+nav.tabs a[aria-current="page"]{background:#fff;color:var(--hdr1);opacity:1;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+main{padding-block:18px 110px}
+h1,h2,h3{font-family:var(--f-display);letter-spacing:-.02em}
+h2{font-size:22px;font-weight:800;text-transform:none}
+h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.btn{border-radius:12px;font-weight:600;border-color:var(--line);box-shadow:0 1px 2px rgba(16,28,52,.05);transition:transform .08s,box-shadow .2s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--hdr2));border-color:transparent;box-shadow:0 4px 14px rgba(36,87,197,.3)}
+fieldset{border:0;border-radius:var(--r);box-shadow:var(--shadow);padding:18px 16px 18px;gap:14px}
+legend{float:left;width:100%;padding:0;margin-bottom:2px;font:700 13px/1.2 var(--f-body);letter-spacing:.06em;color:var(--accent)}
+legend+*{clear:both}
+label.f{font-weight:600;font-size:13.5px;color:var(--ink);gap:6px}
+input[type=text],input[type=number],input[type=date],input[type=time],input[type=month],select,textarea{border-radius:12px;border:1.5px solid transparent;background:var(--surface-2);min-height:46px;padding:10px 12px;transition:border-color .15s,background .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);background:var(--surface)}
+.chips label{border:1.5px solid var(--line);background:var(--surface);font-weight:500;padding:9px 14px}
+.chips label:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:700}
+.readout{border-radius:12px}
+.card{border:0;border-radius:var(--r);box-shadow:var(--shadow)}
+.panel,.kpi{border:0!important;border-radius:var(--r)!important;box-shadow:var(--shadow)}
+.kpi b{font:800 28px/1 var(--f-display);letter-spacing:-.03em}
+.banner{border-radius:12px}
+.sheet{border-radius:22px 22px 0 0}
+.sheet-bg{backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+#toast{border-radius:12px;background:#141A24;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.savebar{background:color-mix(in srgb,var(--surface) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.savebar .btn{min-height:50px;font-size:15.5px}
+.prog{height:6px;border:0;background:var(--line)}
+.prog i{background:linear-gradient(90deg,var(--accent),var(--hdr2));border-radius:3px}
+.stp{border:0;box-shadow:var(--shadow);border-radius:14px;min-height:66px}
+.stp.on{box-shadow:0 0 0 2px var(--accent),var(--shadow)}
+.stp .n{border:0}
+.fcard{border:0;box-shadow:var(--shadow);border-radius:var(--r);padding:14px}
+.fcard.ok{box-shadow:0 0 0 1.5px var(--ok),var(--shadow)}
+.fcard.opc:not(.ok){box-shadow:0 0 0 1.5px dashed var(--line)}
+.fprog{border-radius:12px}
+.ph{border:0;border-radius:12px;box-shadow:var(--shadow)}
+.tbl th{font-size:11px}
+/* seletor de equipamento */
+.eqpick{display:flex;align-items:center;gap:12px;width:100%;min-height:62px;padding:10px 14px;border-radius:14px;border:1.5px dashed var(--accent);background:var(--accent-soft);color:var(--ink);cursor:pointer;text-align:left}
+.eqpick.set{border-style:solid;border-color:transparent;background:var(--surface-2)}
+.eqpick .ic{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font:800 11px/1 var(--f-body)}
+.eqpick .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.eqpick .tx b{font:700 16px/1.2 var(--f-mono)}
+.eqpick .tx span{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eqpick .ch{flex:none;color:var(--muted);font-size:20px}
+.eqsearch{position:sticky;top:-18px;background:var(--surface);padding-block:4px 10px;z-index:2;display:flex;flex-direction:column;gap:8px}
+.eqchips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.eqchips button{flex:none;border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-weight:600;font-size:13px;cursor:pointer;color:var(--ink)}
+.eqchips button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.eqlist{display:flex;flex-direction:column;gap:8px}
+.eqgrp{font:700 12px/1 var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:8px 2px 0}
+.eqitem{display:flex;align-items:center;gap:12px;width:100%;padding:11px 12px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface);cursor:pointer;text-align:left;color:var(--ink)}
+.eqitem:active{transform:scale(.99)}
+.eqitem.sel{border-color:var(--accent);background:var(--accent-soft)}
+.eqitem.off{opacity:.6}
+.eqitem .km{flex:none;width:62px;text-align:center;font:700 14px/1.1 var(--f-mono);color:var(--accent)}
+.eqitem .km small{display:block;font:500 10px/1.3 var(--f-body);color:var(--muted)}
+.eqitem .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.eqitem .tx b{font:600 14.5px/1.2 var(--f-mono)}
+.eqitem .tx span{font-size:12.5px;color:var(--muted)}
+.eqitem .pill{font-size:11px}
 </style>
 </head><body>
 <header class="bar">
@@ -209,7 +299,6 @@ textarea{min-height:84px;resize:vertical}
       <a href="#resumo" data-v="resumo">Resumo</a>
     </nav>
   </div></div>
-  <div class="lane" aria-hidden="true"></div>
 </header>
 <main class="gutter"><div class="wrap" id="app"></div></main>
 <div id="toast" hidden></div>
@@ -498,8 +587,8 @@ function renderForm(app){
   <nav class="stepper" aria-label="Etapas da FVC">${STEPS.map((x,i)=>{const z=statusStep(x.id,F);return`<button type="button" class="stp${x.id===S.step?" on":""}${z.ok?" ok":""}" data-goto="${x.id}" aria-current="${x.id===S.step?"step":"false"}"><span class="n">${z.ok?"✓":i+1}</span><span class="tt">${x.t}</span><span class="ss">${esc(z.t)}</span></button>`}).join("")}</nav>
 
   <fieldset ${st("eq")}><legend>2.1 Caracterização do equipamento</legend>
-    <div class="grid3"><label class="f"><span class="req">Cód. do equipamento</span><input type="text" list="dlEq" data-k="codEquip" value="${esc(F.codEquip)}" placeholder="TOB24100030" autocapitalize="characters"><datalist id="dlEq">${EQUIP.map(e=>`<option value="${e.cod}">${e.tipo} · ${e.br} km ${kmBR(e.km)} · ${e.mun}</option>`).join("")}</datalist></label>
-    <label class="f"><span class="req">Tipo</span>${sel("tipoEquip",TIPOS_EQ)}</label>
+    <label class="f"><span class="req">Equipamento</span>${(()=>{const e=eqDe(F.codEquip);return`<button type="button" class="eqpick${F.codEquip?" set":""}" id="btnEqPick"><span class="ic">${e?e.tipo:"FVC"}</span><span class="tx">${F.codEquip?`<b>${esc(F.codEquip)}</b><span>${e?`${esc(e.br)} · km ${kmBR(e.km)} · ${esc(e.mun)}`:"código fora da lista do contrato"}</span>`:`<b style="font-family:var(--f-body)">Toque para escolher</b><span>${EQUIP.length} equipamentos do contrato</span>`}</span><span class="ch">›</span></button>`})()}</label>
+    <div class="grid2"><label class="f"><span class="req">Tipo</span>${sel("tipoEquip",TIPOS_EQ)}</label>
     <label class="f"><span class="req">km em campo</span>${inp("kmCampo","0,40","decimal")}</label></div>
     ${(()=>{const e=eqDe(F.codEquip);if(!e)return F.codEquip?`<p class="muted" style="margin:0;font-size:13px">Código fora da lista de equipamentos do contrato (${EQUIP_FONTE}).</p>`:"";const st=eqSituacao(e);
       return`<div class="readout" style="flex-direction:column;align-items:stretch;gap:4px"><span style="font-size:14px"><b>${esc(e.cod)}</b> · ${esc(e.tipo)} · ${esc(e.br)} km ${kmBR(e.km)} · ${esc(e.mun)} · faixas ${esc(e.faixas.join(", "))}</span>
@@ -580,6 +669,25 @@ function renderForm(app){
 }
 const ESTRUTURAIS=/^(tipoEquip|defOc|placas\.[CD]\.L[ED]\.\d+\.(tipo|pres|cond))$/;
 function rerenderForm(){const y=window.scrollY;renderForm($("#app"));window.scrollTo(0,y)}
+function escolherEquip(cod){const F=S.form,e=eqDe(cod);closeSheet();
+  if(e){if(!S.editingId||F.codEquip!==e.cod)aplicarEquip(F,e);toast(e.cancel||!e.inicio?`Atenção: ${eqSituacao(e).t.toLowerCase()}.`:"Dados do equipamento preenchidos pela lista do contrato.",3500)}else F.codEquip=String(cod).trim().toUpperCase();
+  if(!S.editingId)ls.set("fvc_rascunho",F);rerenderForm()}
+function abrirSeletorEq(){const ult={};S.items.forEach(o=>{const k=(o.codEquip||"").toUpperCase();if(!ult[k]||(o.dataVerificacao||"")>ult[k])ult[k]=o.dataVerificacao||""});
+  const brs=[...new Set(EQUIP.map(e=>e.br))].sort();let fBR="",q="";
+  sheet(`<div class="row" style="justify-content:space-between"><h2>Escolher equipamento</h2><button class="btn small" id="eqX" type="button">Fechar</button></div>
+  <div class="eqsearch"><input type="text" id="eqQ" placeholder="Buscar por código, km ou município" autocomplete="off" autocapitalize="characters">
+  <div class="eqchips" id="eqChips">${["",...brs].map(b=>`<button type="button" data-br="${b}" aria-pressed="${b===""}">${b||"Todas"}</button>`).join("")}</div></div>
+  <div class="eqlist" id="eqList"></div>`,()=>{
+    const draw=()=>{const qq=q.trim().toLowerCase().replace(",",".");
+      const L=EQUIP.filter(e=>(!fBR||e.br===fBR)&&(!qq||[e.cod,e.mun,e.br,e.km,e.tipo].join(" ").toLowerCase().includes(qq))).sort((a,b)=>a.br.localeCompare(b.br)||parseFloat(a.km)-parseFloat(b.km));
+      let html="",g="";
+      for(const e of L){if(e.br!==g){g=e.br;html+=`<div class="eqgrp">${esc(g)} · ${L.filter(x=>x.br===g).length}</div>`}const st=eqSituacao(e),u=ult[e.cod];
+        html+=`<button type="button" class="eqitem${S.form.codEquip===e.cod?" sel":""}${e.cancel||!e.inicio?" off":""}" data-eq="${e.cod}"><span class="km">${kmBR(e.km)}<small>km</small></span><span class="tx"><b>${esc(e.cod)}</b><span>${esc(e.tipo)} · ${esc(e.mun)} · faixas ${esc(e.faixas.join(", "))}</span><span class="row" style="gap:6px"><span class="pill ${st.c}">${e.cancel?"Cancelado":e.inicio?"Em operação":"Sem início"}</span>${u?`<span class="pill c-nm">Última FVC ${fmtD(u)}</span>`:""}</span></span></button>`}
+      const cod=q.trim().toUpperCase();if(cod.length>=6&&!eqDe(cod))html+=`<button type="button" class="eqitem" data-eq="${esc(cod)}"><span class="km">+</span><span class="tx"><b>${esc(cod)}</b><span>Usar este código (fora da lista do contrato)</span></span></button>`;
+      $("#eqList").innerHTML=html||`<p class="muted" style="margin:8px 0">Nenhum equipamento encontrado.</p>`};
+    draw();$("#eqX").onclick=closeSheet;$("#eqQ").oninput=e=>{q=e.target.value;draw()};
+    $("#eqChips").onclick=e=>{const b=e.target.closest("button");if(!b)return;fBR=b.dataset.br;document.querySelectorAll("#eqChips button").forEach(x=>x.setAttribute("aria-pressed",x===b));draw()};
+    $("#eqList").onclick=e=>{const b=e.target.closest("[data-eq]");if(b)escolherEquip(b.dataset.eq)}})}
 function irStep(id){S.step=id;renderForm($("#app"));window.scrollTo(0,0);const on=document.querySelector(".stp.on");if(on)on.scrollIntoView({inline:"center",block:"nearest"})}
 function atualizaStepper(){const F=S.form;if(!F)return;document.querySelectorAll(".stp").forEach(b=>{const z=statusStep(b.dataset.goto,F);b.classList.toggle("ok",z.ok);b.querySelector(".n").textContent=z.ok?"✓":STEPS.findIndex(x=>x.id===b.dataset.goto)+1;b.querySelector(".ss").textContent=z.t})}
 function onInput(e){const t=e.target,k=t.dataset.k;
@@ -590,6 +698,7 @@ function onInput(e){const t=e.target,k=t.dataset.k;
   drawNC();if(!S.editingId)ls.set("fvc_rascunho",S.form)}
 function onClick(e){const b=e.target.closest("button");if(!b)return;const F=S.form;
   if(b.dataset.goto){irStep(b.dataset.goto);return}
+  if(b.id==="btnEqPick"){abrirSeletorEq();return}
   if(b.dataset.sent){S.sentidoAba=b.dataset.sent;rerenderForm();return}
   if(b.dataset.addplaca){F.placas[S.sentidoAba][b.dataset.addplaca].push(slotVazio());rerenderForm();return}
   if(b.dataset.delplaca){const [lk,i]=b.dataset.delplaca.split(".");F.placas[S.sentidoAba][lk].splice(+i,1);rerenderForm();return}
